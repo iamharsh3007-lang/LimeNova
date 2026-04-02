@@ -1,0 +1,174 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: formulation
+    description: AI skin care formulation
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /formulation/generate:
+    post:
+      operationId: generateFormulation
+      tags: [formulation]
+      summary: Generate a personalised formula
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuestionnaireInput"
+      responses:
+        "200":
+          description: Generated formulation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FormulationResult"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "500":
+          description: Generation failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    ApiError:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
+    QuestionnaireInput:
+      type: object
+      required:
+        - productType
+        - skinType
+        - lifestyle
+        - fragranceStyle
+        - texturePreference
+      properties:
+        productType:
+          type: string
+          enum: [deodorant, shower_gel]
+        skinType:
+          type: string
+          enum: [dry, oily, combination, normal, sensitive]
+        sweatLevel:
+          type: string
+          enum: [light, moderate, heavy]
+          nullable: true
+        skinIssues:
+          type: array
+          items:
+            type: string
+            enum: [redness, itching, dryness, irritation, darkening, acne]
+        allergies:
+          type: array
+          items:
+            type: string
+            enum: [fragrances, alcohol, parabens, sulfates, lanolin, propylene_glycol]
+        lifestyle:
+          type: string
+          enum: [active, office, outdoor, mixed]
+        fragranceStyle:
+          type: string
+          enum: [unscented, fresh, floral, woody, citrus, herbal]
+        texturePreference:
+          type: string
+          enum: [gel, cream, spray, stick, foam]
+    FormulaIngredient:
+      type: object
+      required: [name, purpose]
+      properties:
+        name:
+          type: string
+        purpose:
+          type: string
+        percentage:
+          type: string
+          nullable: true
+    FormulaSection:
+      type: object
+      required: [title, ingredients]
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+          nullable: true
+        ingredients:
+          type: array
+          items:
+            $ref: "#/components/schemas/FormulaIngredient"
+    FormulationResult:
+      type: object
+      required:
+        - id
+        - createdAt
+        - productType
+        - productName
+        - tagline
+        - baseFormula
+        - odorControl
+        - skinCareActives
+        - fragranceProfile
+        - applicationInstructions
+      properties:
+        id:
+          type: string
+        createdAt:
+          type: string
+        productType:
+          type: string
+          enum: [deodorant, shower_gel]
+        productName:
+          type: string
+        tagline:
+          type: string
+        baseFormula:
+          $ref: "#/components/schemas/FormulaSection"
+        odorControl:
+          $ref: "#/components/schemas/FormulaSection"
+        skinCareActives:
+          $ref: "#/components/schemas/FormulaSection"
+        fragranceProfile:
+          $ref: "#/components/schemas/FormulaSection"
+        applicationInstructions:
+          type: string
+        irishWaterNote:
+          type: string
+          nullable: true

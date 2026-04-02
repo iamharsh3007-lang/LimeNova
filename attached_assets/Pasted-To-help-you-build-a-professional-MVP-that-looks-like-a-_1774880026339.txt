@@ -1,0 +1,79 @@
+To help you build a professional MVP that looks like a top-tier App Store product, here are 4 distinct design and color prompts for your LimeNova Replit AI agent.
+
+Each version uses the "Design Rules" from your references to ensure the app feels premium and worth a high subscription price.
+
+Variant 1: "Clinical Noir" (Ultra Premium Dark)
+
+Adapted from the "Midnight Finance" style.
+
+
+Colors: Background #080810, Cards #0F0F1A, Accent #6C63FF (Electric Violet).
+
+
+Typography: Headings in Clash Display Bold, body in Space Grotesk.
+
+Feel: High-tech, professional, and luxury. Uses Glassmorphism cards with subtle purple glow borders.
+
+
+Replit Prompt Addition: "Create a dark, high-tech interface for LimeNova. The formulation results should appear on glowing glass-like cards. Use 'Electric Violet' for call-to-action buttons. It should feel like a 'Bloomberg terminal for skincare' where data looks heavy and important".
+
+Variant 2: "Emerald Premium" (Elevated Irish Tech)
+
+Adapted from the "Saffron" style, but localized for Ireland.
+
+
+Colors: Background #0A0A0A, Cards #141414, Accent #00D4A0 (Emerald Green), Gold highlights #FFD700.
+
+
+Typography: Headings in Satoshi Black, body in Inter.
+
+
+Feel: Familiar but elevated, similar to premium fintech apps like Revolut or CRED.
+
+
+Replit Prompt Addition: "Design a premium dark-themed app with deep emerald green and gold accents. Use bold orange for alerts (like skin irritation warnings). The UI should be mobile-first (390px) with 20px rounded corners on all cards to feel friendly but expensive".
+
+Variant 3: "Cyber-Dermis" (Cyberpunk / Gen Z)
+
+Adapted from the "Neon Ledger" style.
+
+
+Colors: Background #000000, Cards #0D0D0D, Primary neon #00FF87 (Matrix Green), Secondary #FF00FF (Magenta).
+
+
+Typography: Headings in Bebas Neue, body in IBM Plex Mono.
+
+Feel: Bold, different, and futuristic. Uses glowing neon borders and animated chart lines.
+
+
+Replit Prompt Addition: "Build a hacker-aesthetic skincare app. The AI analysis results should 'glitch' onto the screen. Use neon green for safe ingredients and magenta for allergens. Everything should be ultra-modern and high-contrast to appeal to a younger, tech-savvy audience".
+
+Variant 4: "Clean Slate" (Minimal Botanical)
+
+Adapted from the "Clean Slate" style.
+
+
+Colors: Background #F8F8F8, Cards #FFFFFF, Accent #1A1A2E (Deep Navy).
+
+
+Typography: Headings in Fraunces (Editorial Serif), body in Geist.
+
+Feel: Light, airy, and trustworthy. Like a premium notebook or a high-end medical magazine.
+
+
+Replit Prompt Addition: "This is the only light-themed variant. It must feel clinical and calm. Use plenty of white space and elegant, simple charts. The focus is on trust and safety. Use 'Deep Navy' for text to ensure it looks professional and easy to read".
+
+Global Design Rules for all 4 Variants:
+To ensure the "solid" look you requested, make sure your Replit prompt always includes these rules from your reference:
+
+
+Mobile-First: Always 390px width (iPhone 15 Pro size).
+
+
+Floating Navigation: Bottom nav must be pill-shaped, not a flat bar.
+
+
+Interactive Data: Charts must be colorful and prominent—never hidden.
+
+
+Irish Localisation: Ensure the app displays prices in Euro (€) and supports Revolut Pay as a primary payment option.
