@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "LimeNova",
+    "slug": "limenova",
+    "version": "1.0.0",
+    "platforms": ["web", "ios", "android"],
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "assetBundlePatterns": ["**/*"]
+  }
+}
