@@ -1,0 +1,11 @@
+{
+  "builds": [
+    {
+      "src": "artifacts/mobile/index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/", "dest": "artifacts/mobile/index.html" }
+  ]
+}
